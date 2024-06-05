@@ -24,3 +24,9 @@ declare function print(message: string)
 declare function get(class: string): HtmlElement
 declare function fetch(options: FetchOptions): string
 declare function set_timeout(ms: number, callback: () -> ())
+declare function time(): number
+
+declare json: {
+    stringify: (jsonContent: {}) -> string,
+    parse: (content: string) -> {string}
+}
