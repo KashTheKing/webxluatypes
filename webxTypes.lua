@@ -2,6 +2,7 @@ type HtmlElement = {
     on_click: (callback: () -> ()) -> (),
     on_input: (callback: () -> ()) -> (),
     on_submit: (callback: () -> ()) -> (),
+    get_css_name: () -> string,
     get_content: () -> string,
     set_content: (content: string) -> (),
     get_href: () -> string,
@@ -23,5 +24,5 @@ type FetchOptions = {
 declare function print(message: string)
 declare function get(class: string, getAll: boolean?): HtmlElement
 declare function fetch(options: FetchOptions): string
-declare function set_timeout(ms: number, callback: () -> ()): number
+declare function set_timeout(callback: () -> (), ms: number): number
 declare function clear_timeout(id: number)
