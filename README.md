@@ -1,6 +1,6 @@
 # How to Install
 - Download this release or clone the repository into a folder on your computer (for quick updating)
-- Download this VS Code extension: https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp
+- Download this VS Code extension: [Luau LSP](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.luau-lsp)
 - Go to extension settings
 - Add a type definition and set it to the webxTypes.lua file
 - Press CTRL+SHIFT+P and run Luau: Reload Language Server
