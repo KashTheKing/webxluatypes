@@ -20,11 +20,19 @@ type FetchOptions = {
     body: string,
 }
 
+type Timeout = {}
+
 declare function print(message: string)
 declare function get(class: string): HtmlElement
 declare function fetch(options: FetchOptions): string
-declare function set_timeout(ms: number, callback: () -> ())
+declare function set_timeout(callback: () -> (), milliseconds: number): Timeout
+declare function clear_timeout(timeout: Timeout): ()
 declare function time(): number
+
+declare window: {
+    link: string,
+    query: {}
+}
 
 declare json: {
     stringify: (jsonContent: {}) -> string,
