@@ -16,11 +16,12 @@ type HtmlElement = {
 type FetchOptions = {
     url: string,
     method: string,
-    headers: {},
-    body: string,
+    headers: { [string]: string }?,
+    body: string?,
 }
 
 declare function print(message: string)
-declare function get(class: string): HtmlElement
+declare function get(class: string, getAll: boolean?): HtmlElement
 declare function fetch(options: FetchOptions): string
-declare function set_timeout(ms: number, callback: () -> ())
+declare function set_timeout(ms: number, callback: () -> ()): number
+declare function clear_timeout(id: number)
