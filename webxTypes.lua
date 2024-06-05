@@ -2,6 +2,7 @@ type HtmlElement = {
     on_click: (callback: () -> ()) -> (),
     on_input: (callback: () -> ()) -> (),
     on_submit: (callback: () -> ()) -> (),
+    get_css_name: () -> string,
     get_content: () -> string,
     set_content: (content: string) -> (),
     get_href: () -> string,
@@ -16,14 +17,14 @@ type HtmlElement = {
 type FetchOptions = {
     url: string,
     method: string,
-    headers: {},
-    body: string,
+    headers: { [string]: string }?,
+    body: string?,
 }
 
 type Timeout = {}
 
 declare function print(message: string)
-declare function get(class: string): HtmlElement
+declare function get(class: string, getAll: boolean?): HtmlElement
 declare function fetch(options: FetchOptions): string
 declare function set_timeout(callback: () -> (), milliseconds: number): Timeout
 declare function clear_timeout(timeout: Timeout): ()
