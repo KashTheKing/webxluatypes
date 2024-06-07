@@ -21,6 +21,13 @@ type FetchOptions = {
     body: string?,
 }
 
+type Window = {
+    link: string,
+    query: { [string]: string }?,
+}
+
+declare window: Window
+
 declare function print(message: string)
 declare function get(class: string, getAll: boolean?): HtmlElement
 declare function fetch(options: FetchOptions): string
