@@ -25,11 +25,12 @@ type FetchOptions = {
 type Timeout = {}
 
 declare function print(message: string)
-declare function get(class: string, getAll: boolean?): HtmlElement
 declare function fetch(options: FetchOptions): string
 declare function set_timeout(callback: () -> (), milliseconds: number): number
 declare function clear_timeout(id: number): ()
 declare function time(): number
+
+declare get: ((class: string, getAll: true) -> {HtmlElement}) & ((class: string, getAll: false | nil) -> HtmlElement)
 
 declare window: {
     link: string,
